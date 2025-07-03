@@ -22,9 +22,20 @@ An integrated editor window is also provided to inspect and modify save files di
 
 ## 📦 Installation
 
-Simply copy the `DarkSave` folder into your Unity project.
+Download the `DarkSave.unitypackage` file and import it into your Unity project via  
+**Assets → Import Package → Custom Package...**
 
 ---
+
+## 📥 Installation via Git
+
+You can install **Dark Save** directly in your Unity project using the Package Manager with the Git URL:
+
+1. Open **Unity Editor**.
+2. Go to **Window → Package Manager**.
+3. Click the **+** button (top left).
+4. Choose **Add package from Git URL...**
+5. Enter the repository URL: https://github.com/smagoll/darksave.git
 
 ## 🚀 Quick Start
 
