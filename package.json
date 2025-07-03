@@ -1,0 +1,10 @@
+{
+  "name": "com.smagoll.darksave",
+  "version": "1.0.0",
+  "displayName": "Dark Save",
+  "description": "Just a best save system",
+  "unity": "2021.3",
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.2.1"
+  }
+}
