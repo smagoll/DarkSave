@@ -1,9 +1,11 @@
 using System;
 using System.Timers;
-using DarkSave.Editor;
 using Newtonsoft.Json;
-using UnityEditor;
 using UnityEngine;
+
+#if UNITY_EDITOR
+using DarkSave.Editor;
+#endif
 
 namespace DarkSave.Runtime
 {
@@ -78,7 +80,7 @@ namespace DarkSave.Runtime
             _storage.SaveData(json);
 
 #if UNITY_EDITOR
-            UpdateEditorWindow();
+            this.UpdateEditorWindow();
 #endif
         }
 
@@ -106,7 +108,7 @@ namespace DarkSave.Runtime
             }
 
 #if UNITY_EDITOR
-            UpdateEditorWindow();
+            this.UpdateEditorWindow();
 #endif
         }
 
@@ -166,14 +168,6 @@ namespace DarkSave.Runtime
         /// Disables the automatic saving feature.
         /// </summary>
         public void DisableAutoSave() => _autoSaveManager.Disable();
-
-        private void UpdateEditorWindow()
-        {
-#if UNITY_EDITOR
-            var window = EditorWindow.GetWindow<SaveSystemEditorWindow>();
-            window?.SetSaveSystem(this);
-#endif
-        }
 
         /// <summary>
         /// Gets the serialized string (e.g., JSON) representing the current data.

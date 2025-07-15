@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if UNITY_EDITOR
+using System;
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace DarkSave.Editor
 
         [MenuItem("Dark/Save System/Editor Window")]
         public static void ShowWindow() =>
-            GetWindow<SaveSystemEditorWindow>("Save System");
+            GetWindow<SaveSystemEditorWindow>(false, "Save System", false);
 
         public void SetSaveSystem(ISaveSystem system)
         {
@@ -224,3 +225,4 @@ namespace DarkSave.Editor
         }
     }
 }
+#endif
